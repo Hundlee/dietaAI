@@ -1,4 +1,5 @@
 import { colors } from "@/constants/colors";
+import { Link } from "expo-router";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
@@ -14,9 +15,11 @@ export default function Index() {
                 Sua dieta personalizada com inteligência artificial
             </Text>
 
-            <Pressable style={styles.button}>
-                <Text style={styles.buttonText}>Gerar dieta</Text>
-            </Pressable>
+            <Link href="/step" asChild>
+                <Pressable style={styles.button}>
+                    <Text style={styles.buttonText}>Gerar dieta</Text>
+                </Pressable>
+            </Link>
         </View>
     );
 }
